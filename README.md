@@ -20,6 +20,7 @@ Because of this, important requirements may be delayed or forgotten.
 This project aims to develop a system that organizes regular and urgent school tasks
 efficiently while allowing users to undo recent actions.
 
+___
 
 ###  ⤷ ゛Algorithm 💻 ˎˊ˗
 The user will see a list of options at the start of the program. When the user adds a task,
@@ -34,6 +35,18 @@ The program will use iteration in the menu
 system, task display, and task processing through loops. It will also use recursion for at
 least one feature, such as recursively displaying tasks or counting the remaining tasks in
 the system.
+
+
+## ⚙️ Algorithm Explanation
+ 
+1. 🖥️ Program launches with a **menu-driven interface**
+2. ➕ User adds a task → system routes it:
+   - **Regular** → Queue | **Urgent** → Priority Queue
+3. 💾 Every action is **pushed onto the Stack** for undo support
+4. ⏭️ **Process Task** dequeues the next task in line
+5. 🔁 **Undo** pops the most recent action from the Stack
+6. 🔢 **Recursion** is used for displaying or counting remaining tasks
+7. 🔄 Menu loop **iterates** until the user exits
 
 
 ### ⤷ ゛Stack  📚 •₊✧
