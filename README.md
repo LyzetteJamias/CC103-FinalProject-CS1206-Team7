@@ -1,5 +1,5 @@
 # 🌿•₊✧ BarelyOnTime: Academic Task Management System •₊✧ 💻
-___
+🌸___🌸
 
 ## ⤷ ゛Description ᝰ✍🏻 .ᐟ
 
@@ -10,7 +10,7 @@ ___
 ## ⤷ ゛Data Structures Used ˎˊ˗
 
 ___
-## Problem Description
+## Problem Description 🧩🤔
 Students Often struggle to manage multiple academic tasks with different deadlines and
 levels of urgency. 
 
