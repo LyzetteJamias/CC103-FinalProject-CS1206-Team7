@@ -10,7 +10,6 @@ ___
 ## ⤷ ゛Data Structures Used ˎˊ˗
 
 ___
-
 ## Problem Description
 Students Often struggle to manage multiple academic tasks with different deadlines and
 levels of urgency. 
@@ -48,6 +47,7 @@ the system.
 6. 🔢 **Recursion** is used for displaying or counting remaining tasks
 7. 🔄 Menu loop **iterates** until the user exits
 
+___
 
 ### ⤷ ゛Stack  📚 •₊✧
 - **• What it is**:  A linear data structure that follows the Last-In, First-Out (LIFO) principle — the last element added is the first one to be removed.
