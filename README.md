@@ -38,14 +38,14 @@ the system.
 
 ## ⚙️ Algorithm Explanation
  
-1. 🖥️ Program launches with a **menu-driven interface**
-2. ➕ User adds a task → system routes it:
+- 🖥️ Program launches with a **menu-driven interface**
+- ➕ User adds a task → system routes it:
    - **Regular** → Queue | **Urgent** → Priority Queue
-3. 💾 Every action is **pushed onto the Stack** for undo support
-4. ⏭️ **Process Task** dequeues the next task in line
-5. 🔁 **Undo** pops the most recent action from the Stack
-6. 🔢 **Recursion** is used for displaying or counting remaining tasks
-7. 🔄 Menu loop **iterates** until the user exits
+-  💾 Every action is **pushed onto the Stack** for undo support
+- ⏭️ **Process Task** dequeues the next task in line
+- 🔁 **Undo** pops the most recent action from the Stack
+- 🔢 **Recursion** is used for displaying or counting remaining tasks
+- 🔄 Menu loop **iterates** until the user exits
 
 ___
 
