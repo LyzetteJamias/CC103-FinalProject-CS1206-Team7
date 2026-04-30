@@ -63,6 +63,6 @@ ___
 
 
 ##  🙏   Acknowledgement .ᐟ
-We would like to express our sincere gratitude to our professor and the College of Informatics and Computing Sciences of Batangas State University – Alangilan Campus for the guidance and support throughout this project.
+We would like to express our sincere gratitude to our professor and the College of Informatics and Computing Sciences of Batangas State University  Alangilan Campus for the guidance and support throughout this project.
 
-And of course, thank you to caffeine ☕ — the true HERO of every late-night coding session.
+And of course, thank you to caffeine ☕  the true HERO of every late-night coding session.🤔
