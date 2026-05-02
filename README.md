@@ -1,7 +1,7 @@
-# 🌿•₊✧ BarelyOnTime: Academic Task Management System •₊✧ 💻
-┈┈・୨ ✦ ୧・┈┈┈┈・୨ ✦ ୧・┈┈┈┈・୨ ✦ ୧・┈┈┈┈・୨ ✦ ୧・┈┈┈┈・୨ ✦ ୧・┈┈┈┈・୨ ✦ ୧・
+<h1 align="center"> 🌿•₊✧ BarelyOnTime: Academic Task Management System •₊✧ 💻 </h1>
+✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦
 
-## ⤷ ゛Description ᝰ✍🏻 .ᐟ
+<h2 align="center"> ⤷ ゛Description ᝰ✍🏻 .ᐟ </h2>
 
 Students often struggle to manage multiple academic tasks with different deadlines and levels of urgency. Because of this, important requirements may be delayed, overlooked, or forgotten. This project aims to solve that problem by creating a system that organizes tasks based on priority and order.
 
