@@ -113,22 +113,18 @@ public:
 }
 
     void undoLastAction() {
-        /*
-            LANDER TO DO:
 
-            Function na ito yung undo feature.
+    if (actionHistory.empty()) {
 
-            Steps:
-            1. Check kung empty ang actionHistory.
-            2. If empty → "No action to undo"
-            3. If hindi:
-               - ipakita yung last action (top)
-               - tanggalin gamit pop()
-            4. Mag-display ng message
+        cout << "\nNo actions to undo.\n";
+        return;
+    }
 
-            Reminder:
-            Stack = LIFO (last in, first out)
-        */
+    cout << "\nUndoing last action: " << actionHistory.top() << endl;
+    actionHistory.pop();
+
+    cout << "(Action removed from history.)\n";
+
     }
 
     void displayAllTasks() {
