@@ -19,6 +19,11 @@ struct Task {
     int priority;
 };
 
+struct Action {
+string type;
+Task task;
+};
+
 /*
     Ginagamit ito ng priority queue para malaman
     kung alin yung mas mataas na priority.
@@ -38,7 +43,7 @@ private:
     priority_queue<Task, vector<Task>, ComparePriority> urgentTasks; 
     // EDGAR: dito napupunta yung urgent tasks (highest priority first)
 
-    stack<string> actionHistory;  
+    stack<Action> actionHistory;  
     // LANDER: dito sine-save yung actions for undo
 
     vector<Task> allTasks;        
@@ -74,7 +79,7 @@ public:
 
     allTasks.push_back(t);            
 
-    actionHistory.push("Added task: " + t.title);
+    actionHistory.push({"add", t});
 
     cout << "  [OK] Task '" << t.title << "' added.\n";
 
@@ -104,45 +109,71 @@ public:
         
     }
 
+    for (int i = allTasks.size() -1; i >= 0; i--){
+        if (allTasks[i].title == processed.title &&
+            allTasks[i].subject == processed.subject &&
+            allTasks[i].priority == processed.priority) {
+            allTasks.erase(allTasks.begin() + i);
+        break;
+        }
+    }
+
     cout << "\n  [PROCESSED] '" << processed.title
          << "' | " << processed.subject
          << " | Priority: " << processed.priority
          << " | From: " << source << "\n";
 
-    actionHistory.push("Processed task: " + processed.title);
-}
+    actionHistory.push({"process", processed});
+    }
 
     void undoLastAction() {
-
     if (actionHistory.empty()) {
-
         cout << "\nNo actions to undo.\n";
         return;
     }
 
-    cout << "\nUndoing last action: " << actionHistory.top() << endl;
+    Action lastAction = actionHistory.top();
     actionHistory.pop();
 
-    cout << "(Action removed from history.)\n";
+    if (lastAction.type == "add") {
+        for (int i = allTasks.size() - 1; i >= 0; i--) {
+            if (allTasks[i].title == lastAction.task.title &&
+                allTasks[i].subject == lastAction.task.subject &&
+                allTasks[i].priority == lastAction.task.priority) {
+                allTasks.erase(allTasks.begin() + i);
+                break;
+            }
+        }
 
+        cout << "\nUndo successful: Added task removed.\n";
+    }
+    else if (lastAction.type == "process") {
+        allTasks.push_back(lastAction.task);
+
+        if (lastAction.task.priority == 1) {
+            normalTasks.push(lastAction.task);
+        } else {
+            urgentTasks.push(lastAction.task);
+        }
+
+        cout << "\nUndo successful: Processed task restored.\n";
+        }
     }
 
     void displayAllTasks() {
-        /*
-            LANDER TO DO:
 
-            Iterative display (loop).
+    if (allTasks.empty()) {
+        cout << "No tasks available.\n";
+        return;
+    }
 
-            Steps:
-            1. Check kung empty ang allTasks.
-            2. If empty → "No tasks available"
-            3. If hindi:
-               - gumamit ng loop
-               - i-display lahat ng tasks:
-                 number, title, subject, priority
-
-            Ito yung iterative part.
-        */
+    cout << "\nAll Tasks:\n";
+    for (int i = 0; i < allTasks.size(); i++) {
+        cout << i + 1 << ". "
+             << allTasks[i].title << " | "
+             << allTasks[i].subject << " | Priority: "
+             << allTasks[i].priority << endl;
+        }
     }
 
     void displayTasksRecursive(int index) {
