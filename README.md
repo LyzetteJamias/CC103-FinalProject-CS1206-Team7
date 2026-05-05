@@ -22,13 +22,15 @@ ___
 <p align="left">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Stack+📚&width=300&height=35&color=D8B4F8&size=18&pause=1200&speed=20">
 </p>
-- <b> What it is: </b>  A linear data structure that follows the Last-In, First-Out (LIFO) principle — the last element added is the first one to be removed.
+
+- <b> What it is: </b> A linear data structure that follows the Last-In, First-Out (LIFO) principle — the last element added is the first one to be removed.
 
 - <b> Why we used it: </b>  Perfect for the Undo feature. Since the most recent action should be reversed first, LIFO behavior fits naturally. Every action the user performs is pushed onto the stack, and undoing simply pops the top.
 ___
 <p align="left">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Queue+🚶🚶🚶&width=300&height=35&color=9FE2BF&size=18&pause=1200&speed=20">
 </p>
+
 - <b> What it is: </b>   A linear data structure that follows the First-In, First-Out (FIFO) principle — the first element added is the first one to be removed.
 
 - <b> Why we used it: </b>  Used to store regular academic tasks (assignments, quizzes, etc.). FIFO ensures tasks are processed in the order they were added, simulating a fair, first-come, first-served workflow.
@@ -36,6 +38,7 @@ ___
 <p align="left">
   <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Priority+Queue+🚨⭐ˎˊ˗&width=450&height=35&color=FF9AA2&size=18&pause=1200&speed=20">
 </p>
+
 - <b> What it is: </b>  A special type of queue where each element has a priority level. Higher-priority elements are dequeued before lower-priority ones, regardless of insertion order.
 
 - <b> Why we used it: </b>  Used to store urgent academic tasks. This allows critical deadlines to be handled before regular ones, ensuring nothing important is missed.
