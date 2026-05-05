@@ -52,6 +52,46 @@ the system.
 
 ___
 
+- ## Iterative vs Recursive Comparison
+ 
+BarelyOnTime uses **both** approaches — iteration for the core program flow and recursion as a deliberate feature for task display and counting.
+ 
+### Which is faster?
+ 
+| Feature | Approach | Why |
+|---|---|---|
+| Menu loop | Iterative | Constant O(1) space, no call overhead |
+| Task processing | Iterative | Sequential, predictable, O(n) time O(1) space |
+| Display all tasks | Recursive | O(n) time, O(n) space (call stack) |
+| Count tasks | Recursive | O(n) time, O(n) space (call stack) |
+ 
+**Iterative is faster** in terms of raw performance. It uses O(1) space since no additional stack frames are created. Recursive calls, while elegant, each add a new frame to the call stack — making it O(n) in space. For typical student task counts (under 100 items), this difference is negligible, but iterative wins on efficiency.
+ 
+### Which is easier to understand?
+ 
+**Recursion is easier to read** for naturally self-similar problems like displaying a list or counting elements — the logic maps almost directly to its mathematical definition:
+ 
+```
+countTasks(queue):
+  if queue is empty → return 0
+  else → return 1 + countTasks(rest of queue)
+```
+ 
+**Iteration is easier to trace** step by step when debugging, since you can watch variable values change in a single execution context. For the menu system and queue processing, iterative code is more straightforward and less error-prone.
+ 
+**Summary:** Iterative = faster and safer. Recursive = more elegant and readable for display/count features. BarelyOnTime uses each where it fits best.
+
+---
+
+- ## Design Decisions
+ 
+###  Using three separate data structures (Stack + Queue + Priority Queue)
+ 
+**Decision:** Instead of using a single list for all tasks, we separated regular tasks, urgent tasks, and the undo history into three distinct structures.
+ 
+**Trade-off:** This adds complexity in managing three structures simultaneously, but it leads to more correct behavior. A single list would require manual sorting every time a task is added; the Priority Queue handles urgency automatically and efficiently.
+ 
+---
 ## ⤷ ゛  👥 Team Members •₊✧
  
 | SR-Code | Name | Role |
