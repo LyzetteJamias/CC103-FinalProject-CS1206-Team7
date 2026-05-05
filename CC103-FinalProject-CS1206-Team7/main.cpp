@@ -46,52 +46,71 @@ private:
 
 public:
     void addTask() {
-        /*
-            EDGAR TO DO:
+       
+    cin.ignore();                    
 
-            Function na ito yung pang-add ng task.
+    Task t;                          
+    cout << "\n  Task title   : ";
+    getline(cin, t.title);
 
-            Steps:
-            1. Gumawa ng Task variable.
-            2. Humingi ng input para sa title.
-            3. Humingi ng input para sa subject.
-            4. Humingi ng input para sa priority.
-               (1 = normal, 2/3 = urgent)
-            5. If priority == 1 → ilagay sa normalTasks.
-            6. If priority > 1 → ilagay sa urgentTasks.
-            7. I-add din sa allTasks para makita later.
-            8. I-save sa actionHistory (ex: "Added task: ...")
-            9. Mag-display ng success message.
-        */
+    cout << "  Subject      : ";
+    getline(cin, t.subject);
+
+    
+    cout << "  Priority (1=normal, 2/3=urgent): ";
+    cin >> t.priority;
+
+    
+    if (t.priority == 1) {
+        normalTasks.push(t);          
+        cout << "  Queued as a normal task.\n";
+        
+    } else {
+        
+        urgentTasks.push(t);         
+        cout << "  Queued as an urgent task.\n";
+        
+    }
+
+    allTasks.push_back(t);            
+
+    actionHistory.push("Added task: " + t.title);
+
+    cout << "  [OK] Task '" << t.title << "' added.\n";
+
     }
 
     void processTask() {
-        /*
-            EDGAR TO DO:
+       
+    Task processed;
+    string source;
 
-            Function na ito yung magpo-process ng task.
+    if (!urgentTasks.empty()) {
+      
+        processed = urgentTasks.top();
+        urgentTasks.pop();
+        source = "Priority Queue";
 
-            Logic:
-            1. Check muna urgentTasks.
-            2. If may laman:
-               - kunin yung highest priority
-               - tanggalin sa urgentTasks
-               - i-display kung anong task yung na-process
-               - i-save sa actionHistory
-            3. If wala, check normalTasks.
-            4. If may laman:
-               - kunin yung first task (FIFO)
-               - tanggalin sa queue
-               - i-display
-               - i-save sa actionHistory
-            5. If parehong empty:
-               - display "No tasks to process"
+    } else if (!normalTasks.empty()) {
+       
+        processed = normalTasks.front();
+        normalTasks.pop();
+        source = "Normal Queue";
 
-            Reminder:
-            Priority Queue = urgent muna
-            Queue = first come, first serve
-        */
+    } else {
+       
+        cout << "\n  No tasks to process.\n";
+        return;
+        
     }
+
+    cout << "\n  [PROCESSED] '" << processed.title
+         << "' | " << processed.subject
+         << " | Priority: " << processed.priority
+         << " | From: " << source << "\n";
+
+    actionHistory.push("Processed task: " + processed.title);
+}
 
     void undoLastAction() {
         /*
