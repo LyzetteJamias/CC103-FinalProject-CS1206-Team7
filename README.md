@@ -1,8 +1,11 @@
-<h1 align="center"> 🌿•₊✧ BarelyOnTime: Academic Task Management System •₊✧ 💻 </h1>
+<h1 align="center">ᯓ★ BarelyOnTime .ᐟ.ᐟ</h1>
+<p align="center">
+  <b>💻 Academic Task Management System</b>
+</p>
 
-<b align="center">
+<i align="center">
 A simple academic task management system designed to help students organize, prioritize, and track their school requirements efficiently.
-</b>
+</i>
 
 ___
 
