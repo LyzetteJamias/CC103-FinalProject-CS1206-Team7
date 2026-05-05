@@ -63,7 +63,7 @@ public:
         allTasks.push_back(t);
         actionHistory.push({"add", t});
 
-        cout << "✓ Task added successfully.\n";
+        cout << " Task added successfully.\n";
     }
 
     void processTask() {
@@ -79,7 +79,7 @@ public:
             normalTasks.pop();
             source = "Normal Queue";
         } else {
-            cout << "\n× No tasks to process.\n";
+            cout << "\n No tasks to process.\n";
             return;
         }
 
@@ -92,7 +92,7 @@ public:
             }
         }
 
-        cout << "\n🗲 Processed task: " << processed.title
+        cout << "\n Processed task: " << processed.title
              << " | Subject: " << processed.subject
              << " | Priority: " << processed.priority
              << " | From: " << source << endl;
@@ -119,7 +119,7 @@ public:
                 }
             }
 
-            cout << "\n↩ Undo successful: Added task removed.\n";
+            cout << "\n Undo successful: Added task removed.\n";
         } 
         else if (lastAction.type == "process") {
             allTasks.push_back(lastAction.task);
@@ -223,10 +223,10 @@ int main() {
     int choice;
 
     do {
-        cout << "\n╔═════════════════════════════════════╗\n";
-        cout << "          ✿ BarelyOnTime ✿            \n";
+        cout << "\n======================================\n";
+        cout << "            BarelyOnTime              \n";
         cout << "   Academic Task Management System    \n";
-        cout << "╚═════════════════════════════════════╝\n";
+        cout << "======================================\n";
 
         cout << "\nChoose an option:\n";
         cout << "  [1] Add Task\n";
@@ -238,7 +238,7 @@ int main() {
         cout << "  [7] Sort by Priority\n";
         cout << "  [8] Exit\n";
 
-        cout << "\n→ Enter choice: ";
+        cout << "\n Enter choice: ";
 
         if (!(cin >> choice)) {
             cin.clear();
