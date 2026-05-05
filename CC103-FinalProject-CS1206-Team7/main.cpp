@@ -177,72 +177,72 @@ public:
     }
 
     void displayTasksRecursive(int index) {
-        /*
-            LANDER TO DO:
+    if (index >= allTasks.size()) {
+        return;
+    }
 
-            Recursive display.
+    cout << index + 1 << ". "
+         << allTasks[index].title << " | "
+         << allTasks[index].subject << " | Priority: "
+         << allTasks[index].priority << endl;
 
-            Steps:
-            1. Base case:
-               if index >= allTasks.size() → stop (return)
-            2. I-display yung current task
-            3. Tawagin ulit sarili niya (index + 1)
-
-            Example:
-            0 → 1 → 2 → hanggang matapos
-        */
+    displayTasksRecursive(index + 1);
     }
 
     void displayRecursiveMenu() {
-        /*
-            LANDER TO DO:
+    if (allTasks.empty()) {
+        cout << "\nNo tasks available.\n";
+        return;
+    }
 
-            Starter ng recursive function.
-
-            Steps:
-            1. Check kung empty ang allTasks.
-            2. If empty → "No tasks available"
-            3. If hindi:
-               - mag-display ng title
-               - tawagin displayTasksRecursive(0)
-
-            Ito yung proof na may recursion kayo.
-        */
+    cout << "\nAll Tasks using Recursive Display:\n";
+    displayTasksRecursive(0);
     }
 
     void searchTask() {
-        /*
-            LANDER TO DO:
+    if (allTasks.empty()) {
+        cout << "\nNo tasks available.\n";
+        return;
+    }
 
-            Pang-search ng task.
+    string keyword;
+    bool found = false;
 
-            Steps:
-            1. Humingi ng keyword sa user
-            2. Loop through allTasks
-            3. If match → i-display
-            4. If walang nakita → "No matching task"
+    cin.ignore();
+    cout << "\nEnter task title to search: ";
+    getline(cin, keyword);
 
-            Tip:
-            Pwede gumamit ng .find()
-        */
+    cout << "\nSearch Results:\n";
+
+    for (int i = 0; i < allTasks.size(); i++) {
+        if (allTasks[i].title.find(keyword) != string::npos) {
+            cout << i + 1 << ". "
+                 << allTasks[i].title << " | "
+                 << allTasks[i].subject << " | Priority: "
+                 << allTasks[i].priority << endl;
+
+            found = true;
+        }
+    }
+
+    if (!found) {
+        cout << "No matching task found.\n";
+        }
     }
 
     void sortTasksByPriority() {
-        /*
-            LANDER TO DO:
-
-            Pang-sort ng tasks.
-
-            Steps:
-            1. Check kung empty ang allTasks
-            2. If empty → "No tasks available"
-            3. Gumamit ng sort()
-            4. Ayusin from highest to lowest priority
-            5. Display success message
-
-            Ito yung sorting requirement niyo.
-        */
+    if (allTasks.empty()) {
+        cout << "\nNo tasks available.\n";
+        return;
     }
+
+    sort(allTasks.begin(), allTasks.end(), [](Task a, Task b) {
+        return a.priority > b.priority;
+    });
+
+    cout << "\nTasks sorted by priority successfully.\n";
+    }
+    
 };
 
 int main() {
