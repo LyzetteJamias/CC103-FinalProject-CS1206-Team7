@@ -1,38 +1,48 @@
-<h1 align="center">ᯓ★ BarelyOnTime .ᐟ.ᐟ</h1>
-<p align="center">
-  <b>💻 Academic Task Management System</b>
-</p>
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=ᯓ★+BarelyOnTime+.ᐟ.ᐟ&center=true&width=500&height=60&color=F8A1C4&size=32&pause=1000">
+</h1>
 
-<i align="center">
-A simple academic task management system designed to help students organize, prioritize, and track their school requirements efficiently.
-</i>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=💻+A+simple+academic+task+management+system;Designed+to+help+students+organize,+prioritize,+and+track+their+school+requirements.&center=true&width=900&height=60&color=89CFF0&size=16&pause=2000&speed=15&vCenter=true">
+</p>
 
 ___
 
-## ⤷ ゛Description ᝰ✍🏻 .ᐟ
-
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Description+ᝰ✍🏻+.ᐟ&width=400&height=40&color=F8A1C4&size=22&pause=1500&speed=20">
+</p>
 Students often struggle to manage multiple academic tasks with different deadlines and levels of urgency. Because of this, important requirements may be delayed, overlooked, or forgotten. This project aims to solve that problem by creating a system that organizes tasks based on priority and order.
 
 ___
 
-## ‧˚꒰📊꒱ Data Structures Used ₊˚⋆
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=‧˚꒰📊꒱+Data+Structures+Used+₊˚⋆&width=500&height=40&color=89CFF0&size=22&pause=1500&speed=20">
+</p>
 
-### ⤷ ゛Stack  📚
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Stack+📚&width=300&height=35&color=D8B4F8&size=18&pause=1200&speed=20">
+</p>
 - <b> What it is: </b>  A linear data structure that follows the Last-In, First-Out (LIFO) principle — the last element added is the first one to be removed.
 
 - <b> Why we used it: </b>  Perfect for the Undo feature. Since the most recent action should be reversed first, LIFO behavior fits naturally. Every action the user performs is pushed onto the stack, and undoing simply pops the top.
 ___
-### ⤷ ゛ Queue  🚶🚶🚶
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Queue+🚶🚶🚶&width=300&height=35&color=9FE2BF&size=18&pause=1200&speed=20">
+</p>
 - <b> What it is: </b>   A linear data structure that follows the First-In, First-Out (FIFO) principle — the first element added is the first one to be removed.
 
 - <b> Why we used it: </b>  Used to store regular academic tasks (assignments, quizzes, etc.). FIFO ensures tasks are processed in the order they were added, simulating a fair, first-come, first-served workflow.
 ___
-### ⤷ ゛ Priority Queue 🚨⭐ˎˊ˗
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Priority+Queue+🚨⭐ˎˊ˗&width=450&height=35&color=FF9AA2&size=18&pause=1200&speed=20">
+</p>
 - <b> What it is: </b>  A special type of queue where each element has a priority level. Higher-priority elements are dequeued before lower-priority ones, regardless of insertion order.
 
 - <b> Why we used it: </b>  Used to store urgent academic tasks. This allows critical deadlines to be handled before regular ones, ensuring nothing important is missed.
 ___
-## ‧˚꒰💻꒱ Algorithm ˎˊ˗
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=‧˚꒰💻꒱+Algorithm+ˎˊ˗&width=350&height=40&color=CBA6F7&size=22&pause=1500&speed=20">
+</p>
 The user will see a list of options at the start of the program. When the user adds a task,
 the system will ask for the task details and determine whether it is a regular or urgent
 task.
@@ -47,7 +57,9 @@ least one feature, such as recursively displaying tasks or counting the remainin
 the system.
 
 
-## ⤷ ゛Algorithm Explanation ⚙️
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Algorithm+Explanation+⚙️&width=550&height=40&color=7DAFFF&size=22&pause=1500&speed=20">
+</p>
  
 - 🖥️ Program launches with a **menu-driven interface**
 - ➕ User adds a task → system routes it:
@@ -60,7 +72,9 @@ the system.
 
 ___
 
-## 𐔌 . ⋮ Iterative vs Recursive Comparison .ᐟ ֹ ₊ ꒱
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=𐔌+.+⋮+Iterative+vs+Recursive+Comparison+.ᐟ+ֹ+₊+꒱&width=700&height=40&color=98FB98&size=22&pause=1500&speed=20">
+</p>
  
 BarelyOnTime uses **both** approaches — iteration for the core program flow and recursion as a deliberate feature for task display and counting.
  
@@ -91,7 +105,9 @@ countTasks(queue):
 
 ---
 
-## ⤷ ゛ Design Decisions 💭
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛+Design+Decisions+💭&width=450&height=40&color=FFB6A3&size=22&pause=1500&speed=20">
+</p>
  
 ###  Using three separate data structures (Stack + Queue + Priority Queue)
  
@@ -100,7 +116,9 @@ countTasks(queue):
 **Trade-off:** This adds complexity in managing three structures simultaneously, but it leads to more correct behavior. A single list would require manual sorting every time a task is added; the Priority Queue handles urgency automatically and efficiently.
  
 ---
-## ⤷ ゛👥 Team Members •₊✧
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=⤷+゛👥+Team+Members+•₊✧&width=450&height=40&color=FFD580&size=22&pause=1500&speed=20">
+</p>
  
 | SR-Code | Name | Role |
 |---|---|---|
@@ -109,7 +127,9 @@ countTasks(queue):
  25-09661 | **Rein Lander B. Juanites** | 🐛 Programmer, Testing, Debugging 
 
 
-##  💛 Heartfelt Acknowledgement .ᐟ
+<p align="left">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=💛+Heartfelt+Acknowledgement+.ᐟ&width=450&height=40&color=FFB6C1&size=22&pause=1500&speed=20">
+</p>
 We would like to express our sincere gratitude to our professor for the guidance, patience, and continuous support throughout the development of this project. The lessons and feedback given in class helped us better understand how to apply data structures beyond theory and into something practical.
 
 This project was not without its challenges. As a group, we experienced different difficulties, including limited access to devices for some members and the struggle of managing time alongside other academic responsibilities. Despite this, we did our best to support one another and find ways to continue working on the project.
