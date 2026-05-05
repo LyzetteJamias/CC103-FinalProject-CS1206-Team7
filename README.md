@@ -1,5 +1,10 @@
 <h1 align="center"> 🌿•₊✧ BarelyOnTime: Academic Task Management System •₊✧ 💻 </h1>
-✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯ ⋯⋅๑┈·✦✦·┈๑⋅⋯
+
+<b align="center">
+A simple academic task management system designed to help students organize, prioritize, and track their school requirements efficiently.
+</b>
+
+___
 
 ## ⤷ ゛Description ᝰ✍🏻 .ᐟ
 
@@ -7,24 +12,24 @@ Students often struggle to manage multiple academic tasks with different deadlin
 
 ___
 
-## ⤷ ゛Data Structures Used ˎˊ˗
+## ‧˚꒰📊꒱ Data Structures Used ₊˚⋆
 
-### ⤷ ゛Stack  📚 •₊✧
-- **• What it is**:  A linear data structure that follows the Last-In, First-Out (LIFO) principle — the last element added is the first one to be removed.
+### ⤷ ゛Stack  📚
+- <b> What it is: </b>  A linear data structure that follows the Last-In, First-Out (LIFO) principle — the last element added is the first one to be removed.
 
-- **• Why we used it**:  Perfect for the Undo feature. Since the most recent action should be reversed first, LIFO behavior fits naturally. Every action the user performs is pushed onto the stack, and undoing simply pops the top.
+- <b> Why we used it: </b>  Perfect for the Undo feature. Since the most recent action should be reversed first, LIFO behavior fits naturally. Every action the user performs is pushed onto the stack, and undoing simply pops the top.
 ___
 ### ⤷ ゛ Queue  🚶🚶🚶
-- **• What it is**:  A linear data structure that follows the First-In, First-Out (FIFO) principle — the first element added is the first one to be removed.
+- <b> What it is: </b>   A linear data structure that follows the First-In, First-Out (FIFO) principle — the first element added is the first one to be removed.
 
-- **• Why we used it**:  Used to store regular academic tasks (assignments, quizzes, etc.). FIFO ensures tasks are processed in the order they were added, simulating a fair, first-come, first-served workflow.
+- <b> Why we used it: </b>  Used to store regular academic tasks (assignments, quizzes, etc.). FIFO ensures tasks are processed in the order they were added, simulating a fair, first-come, first-served workflow.
 ___
 ### ⤷ ゛ Priority Queue 🚨⭐ˎˊ˗
-- **• What it is**:  A special type of queue where each element has a priority level. Higher-priority elements are dequeued before lower-priority ones, regardless of insertion order.
+- <b> What it is: </b>  A special type of queue where each element has a priority level. Higher-priority elements are dequeued before lower-priority ones, regardless of insertion order.
 
-- **• Why we used it**:  Used to store urgent academic tasks. This allows critical deadlines to be handled before regular ones, ensuring nothing important is missed.
+- <b> Why we used it: </b>  Used to store urgent academic tasks. This allows critical deadlines to be handled before regular ones, ensuring nothing important is missed.
 ___
-###  ⤷ ゛Algorithm 💻 ˎˊ˗
+## ‧˚꒰💻꒱ Algorithm ˎˊ˗
 The user will see a list of options at the start of the program. When the user adds a task,
 the system will ask for the task details and determine whether it is a regular or urgent
 task.
@@ -39,7 +44,7 @@ least one feature, such as recursively displaying tasks or counting the remainin
 the system.
 
 
-## ⚙️ Algorithm Explanation
+## ⤷ ゛Algorithm Explanation ⚙️
  
 - 🖥️ Program launches with a **menu-driven interface**
 - ➕ User adds a task → system routes it:
@@ -52,7 +57,7 @@ the system.
 
 ___
 
-- ## Iterative vs Recursive Comparison
+## 𐔌 . ⋮ Iterative vs Recursive Comparison .ᐟ ֹ ₊ ꒱
  
 BarelyOnTime uses **both** approaches — iteration for the core program flow and recursion as a deliberate feature for task display and counting.
  
@@ -83,7 +88,7 @@ countTasks(queue):
 
 ---
 
-- ## Design Decisions
+## ⤷ ゛ Design Decisions 💭
  
 ###  Using three separate data structures (Stack + Queue + Priority Queue)
  
@@ -92,7 +97,7 @@ countTasks(queue):
 **Trade-off:** This adds complexity in managing three structures simultaneously, but it leads to more correct behavior. A single list would require manual sorting every time a task is added; the Priority Queue handles urgency automatically and efficiently.
  
 ---
-## ⤷ ゛  👥 Team Members •₊✧
+## ⤷ ゛👥 Team Members •₊✧
  
 | SR-Code | Name | Role |
 |---|---|---|
@@ -101,7 +106,13 @@ countTasks(queue):
  25-09661 | **Rein Lander B. Juanites** | 🐛 Programmer, Testing, Debugging 
 
 
-##  🙏   Acknowledgement .ᐟ
-We would like to express our sincere gratitude to our professor and the College of Informatics and Computing Sciences of Batangas State University  Alangilan Campus for the guidance and support throughout this project.
+##  💛 Heartfelt Acknowledgement .ᐟ
+We would like to express our sincere gratitude to our professor for the guidance, patience, and continuous support throughout the development of this project. The lessons and feedback given in class helped us better understand how to apply data structures beyond theory and into something practical.
 
-And of course, thank you to caffeine ☕  the true HERO of every late-night coding session.🤔
+This project was not without its challenges. As a group, we experienced different difficulties, including limited access to devices for some members and the struggle of managing time alongside other academic responsibilities. Despite this, we did our best to support one another and find ways to continue working on the project.
+
+Through this experience, we learned not only about programming, but also about teamwork, communication, and responsibility. It taught us the importance of stepping up when needed, being patient with each other, and finding solutions even when resources are limited.
+
+Lastly, we would like to thank ourselves as a team for pushing through the stress, adjustments, and late nights to complete this project.
+
+And of course, a small thank you to caffeine ☕ for helping us stay awake when we needed it most.
